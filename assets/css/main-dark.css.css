@@ -1,0 +1,140 @@
+/* Dark Theme Version of main.css */
+
+@import url(fontawesome-all.min.css);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  background: #121212; /* Dark background */
+  color: #e0e0e0;      /* Light text */
+}
+
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* Typography */
+body, input, select, textarea {
+  color: #e0e0e0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13pt;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 1em 0;
+}
+
+a {
+  transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  border-bottom: dotted 1px #82cfff;
+  color: #82cfff;
+  text-decoration: none;
+}
+a:hover {
+  border-bottom-color: #bbdefb;
+  color: #bbdefb !important;
+}
+
+strong, b { color: #ffffff; font-weight: 600; }
+p { margin: 0 0 2em 0; }
+
+/* Sidebar */
+#sidebar {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+}
+#sidebar > .inner > * { border-bottom: solid 2px rgba(255, 255, 255, 0.1); }
+
+/* Header */
+#header {
+  border-bottom: solid 5px #f56a6a;
+}
+
+/* Footer */
+#footer .copyright { color: #bbbbbb; }
+
+/* Buttons */
+input[type="submit"], input[type="reset"], input[type="button"], button, .button {
+  background-color: #333333;
+  color: #ffffff !important;
+  border: 1px solid #555555;
+  box-shadow: none;
+}
+input[type="submit"].primary, input[type="reset"].primary, input[type="button"].primary, button.primary, .button.primary {
+  background-color: #f56a6a;
+  color: #ffffff !important;
+}
+input[type="submit"].primary:hover, input[type="reset"].primary:hover, input[type="button"].primary:hover, button.primary:hover, .button.primary:hover {
+  background-color: #f67878;
+}
+
+/* Forms */
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="search"], input[type="url"], select, textarea {
+  background: #1e1e1e;
+  color: #e0e0e0;
+  border: solid 1px #444444;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="search"]:focus, input[type="url"]:focus, select:focus, textarea:focus {
+  border-color: #f56a6a;
+  box-shadow: 0 0 0 1px #f56a6a;
+}
+
+/* Tables */
+table tbody tr { border: solid 1px rgba(255, 255, 255, 0.1); }
+table tbody tr:nth-child(2n + 1) { background-color: rgba(255, 255, 255, 0.05); }
+table th { color: #ffffff; }
+
+/* Other UI elements */
+.box {
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  background-color: #1e1e1e;
+}
+
+ul.alt li {
+  border-top: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+ul.contact li:before {
+  color: #f56a6a;
+}
+
+/* Images */
+.image img {
+  border-radius: 0.375em;
+  display: block;
+}
+
+/* Keep all other layout classes as is */
+
+

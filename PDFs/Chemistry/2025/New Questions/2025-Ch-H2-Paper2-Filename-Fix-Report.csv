@@ -1,0 +1,49 @@
+original_filename,original_code,new_filename,detected_code,status,reason
+CCS-PER-Sol-2025-Ch-H1-Q1-ChemicalChangesAndStructure-Periodicity.pdf,CCS-PER,CCS-PER-Sol-2025-Ch-H1-Q1-ChemicalChangesAndStructure-Periodicity.pdf,CCS-PER,AGREE,Already OK
+CCS-PER-Sol-2025-Ch-H1-Q2-ChemicalChangesAndStructure-Periodicity.pdf,CCS-PER,CCS-PER-Sol-2025-Ch-H1-Q2-ChemicalChangesAndStructure-Periodicity.pdf,CCS-PER,AGREE,Already OK
+CCS-PER-Sol-2025-Ch-H1-Q22-ChemicalChangesAndStructure-Periodicity.pdf,CCS-PER,CCS-PER-Sol-2025-Ch-H1-Q22-ChemicalChangesAndStructure-Periodicity.pdf,CCS-PER,AGREE,Already OK
+CCS-SB-Sol-2025-Ch-H1-Q21-ChemicalChangesAndStructure-ChemicalFormulaeAndMoles.pdf,CCS-SB,CCS-SB-Sol-2025-Ch-H1-Q21-ChemicalChangesAndStructure-ChemicalFormulaeAndMoles.pdf,CCS-SB,AGREE,Already OK
+CS-CEN-Sol-2025-Ch-H1-Q13-ChemicalChangesAndStructure-RatesOfReaction.pdf,CS-CEN,CS-CEN-Sol-2025-Ch-H1-Q13-ChemicalChangesAndStructure-RatesOfReaction.pdf,CS-CEN,AGREE,Already OK
+CS-CEN-Sol-2025-Ch-H1-Q15-ChemistryInSociety-ChemicalEnergy.pdf,CS-CEN,CS-CEN-Sol-2025-Ch-H1-Q15-ChemistryInSociety-ChemicalEnergy.pdf,CS-CEN,AGREE,Already OK
+CS-CEN-Sol-2025-Ch-H1-Q18-ChemistryInSociety-ChemicalEnergy.pdf,CS-CEN,CS-CEN-Sol-2025-Ch-H1-Q18-ChemistryInSociety-ChemicalEnergy.pdf,CS-CEN,AGREE,Already OK
+CS-CEN-Sol-2025-Ch-H1-Q19-ChemistryInSociety-Catalysts.pdf,CS-CEN,CS-CEN-Sol-2025-Ch-H1-Q19-ChemistryInSociety-Catalysts.pdf,CS-CEN,AGREE,Already OK
+CS-CEN-Sol-2025-Ch-H1-Q20-ChemistryInSociety-ChemicalEnergy.pdf,CS-CEN,CS-CEN-Sol-2025-Ch-H1-Q20-ChemistryInSociety-ChemicalEnergy.pdf,CS-CEN,AGREE,Already OK
+CS-EQ-Sol-2024-Ch-H1-Q23-ChemistryInSociety-Equilibia.pdf,CS-EQ,CS-EQ-Sol-2024-Ch-H1-Q23-ChemistryInSociety-Equilibia.pdf,CS-EQ,AGREE,Already OK
+CS-EQ-Sol-2025-Ch-H1-Q3-ChemistryInSociety-Equilibria.pdf,CS-EQ,CS-EQ-Sol-2025-Ch-H1-Q3-ChemistryInSociety-Equilibria.pdf,CS-EQ,AGREE,Already OK
+CS-EQ-Sol-2025-Ch-H1-Q16-ChemistryInSociety-Equilibria.pdf,CS-EQ,CS-EQ-Sol-2025-Ch-H1-Q16-ChemistryInSociety-Equilibria.pdf,CS-EQ,AGREE,Already OK
+CS-EQ-Sol-2025-Ch-H1-Q17-ChemistryInSociety-Equilibria.pdf,CS-EQ,CS-EQ-Sol-2025-Ch-H1-Q17-ChemistryInSociety-Equilibria.pdf,CS-EQ,AGREE,Already OK
+NC-ALC-Sol-2025-Ch-H1-Q5-NaturesChemistry-Alcohols.pdf,NC-ALC,NC-ALC-Sol-2025-Ch-H1-Q5-NaturesChemistry-Alcohols.pdf,NC-ALC,AGREE,Already OK
+NC-CAR-Sol-2025-Ch-H1-Q6-NaturesChemistry-CarboxylicAcids.pdf,NC-CAR,NC-CA-CAR-Sol-2025-Ch-H1-Q6-NaturesChemistry-CarboxylicAcids.pdf,NC-CA,FIXED,Inferred from topic 'carboxylicacids'
+NC-EST-Sol-2025-Ch-H1-Q7-NaturesChemistry-Esters.pdf,NC-EST,NC-EST-Sol-2025-Ch-H1-Q7-NaturesChemistry-Esters.pdf,NC-EST,AGREE,Already OK
+NC-FOX-Sol-2025-Ch-H1-Q8-NaturesChemistry-OxidationOfFood.pdf,NC-FOX,NC-FOX-Sol-2025-Ch-H1-Q8-NaturesChemistry-OxidationOfFood.pdf,NC-FOX,AGREE,Already OK
+NC-FOX-Sol-2025-Ch-H1-Q9-NaturesChemistry-OxidationOfFood.pdf,NC-FOX,NC-FOX-Sol-2025-Ch-H1-Q9-NaturesChemistry-OxidationOfFood.pdf,NC-FOX,AGREE,Already OK
+NC-FRA-Sol-2025-Ch-H1-Q12-NaturesChemistry-Fragrances.pdf,NC-FRA,NC-FRA-Sol-2025-Ch-H1-Q12-NaturesChemistry-Fragrances.pdf,NC-FRA,AGREE,Already OK
+NC-SCC-Sol-2025-Ch-H1-Q4-NaturesChemistry-SystematicCarbonChemistry.pdf,NC-SCC,NC-SCC-Sol-2025-Ch-H1-Q4-NaturesChemistry-SystematicCarbonChemistry.pdf,NC-SCC,AGREE,Already OK
+NC-SDE-Sol-2025-Ch-H1-Q10-NaturesChemistry-SoapsDetergentsAndEmulsions.pdf,NC-SDE,NC-S-SDE-Sol-2025-Ch-H1-Q10-NaturesChemistry-SoapsDetergentsAndEmulsions.pdf,NC-S,FIXED,Inferred from keyword 'soaps' in filename
+NC-SDE-Sol-2025-Ch-H1-Q11-NaturesChemistry-SoapsDetergentsAndEmulsions.pdf,NC-SDE,NC-S-SDE-Sol-2025-Ch-H1-Q11-NaturesChemistry-SoapsDetergentsAndEmulsions.pdf,NC-S,FIXED,Inferred from keyword 'soaps' in filename
+RC-GPT-Sol-2025-Ch-H1-Q24-ChemistryInSociety-ExperimentalTechniques.pdf,RC-GPT,RC-GPT-Sol-2025-Ch-H1-Q24-ChemistryInSociety-ExperimentalTechniques.pdf,RC-GPT,AGREE,Already OK
+RC-GPT-Sol-2025-Ch-H1-Q25-ChemistryInSociety-ExperimentalTechniques.pdf,RC-GPT,RC-GPT-Sol-2025-Ch-H1-Q25-ChemistryInSociety-ExperimentalTechniques.pdf,RC-GPT,AGREE,Already OK
+._CCS-PER-Sol-2025-Ch-H1-Q1-ChemicalChangesAndStructure-Periodicity.pdf,,CCS-PER-._CCS-PER-Sol-2025-Ch-H1-Q1-ChemicalChangesAndStructure-Periodicity.pdf,CCS-PER,FIXED,Inferred from topic 'periodicity'
+._CCS-PER-Sol-2025-Ch-H1-Q2-ChemicalChangesAndStructure-Periodicity.pdf,,CCS-PER-._CCS-PER-Sol-2025-Ch-H1-Q2-ChemicalChangesAndStructure-Periodicity.pdf,CCS-PER,FIXED,Inferred from topic 'periodicity'
+._CCS-PER-Sol-2025-Ch-H1-Q22-ChemicalChangesAndStructure-Periodicity.pdf,,CCS-PER-._CCS-PER-Sol-2025-Ch-H1-Q22-ChemicalChangesAndStructure-Periodicity.pdf,CCS-PER,FIXED,Inferred from topic 'periodicity'
+._CCS-SB-Sol-2025-Ch-H1-Q21-ChemicalChangesAndStructure-ChemicalFormulaeAndMoles.pdf,,._CCS-SB-Sol-2025-Ch-H1-Q21-ChemicalChangesAndStructure-ChemicalFormulaeAndMoles.pdf,,REVIEW,Could not confidently infer a valid code
+._CS-CEN-Sol-2025-Ch-H1-Q13-ChemicalChangesAndStructure-RatesOfReaction.pdf,,._CS-CEN-Sol-2025-Ch-H1-Q13-ChemicalChangesAndStructure-RatesOfReaction.pdf,,REVIEW,Could not confidently infer a valid code
+._CS-CEN-Sol-2025-Ch-H1-Q15-ChemistryInSociety-ChemicalEnergy.pdf,,CS-CEN-._CS-CEN-Sol-2025-Ch-H1-Q15-ChemistryInSociety-ChemicalEnergy.pdf,CS-CEN,FIXED,Inferred from topic 'chemicalenergy'
+._CS-CEN-Sol-2025-Ch-H1-Q18-ChemistryInSociety-ChemicalEnergy.pdf,,CS-CEN-._CS-CEN-Sol-2025-Ch-H1-Q18-ChemistryInSociety-ChemicalEnergy.pdf,CS-CEN,FIXED,Inferred from topic 'chemicalenergy'
+._CS-CEN-Sol-2025-Ch-H1-Q19-ChemistryInSociety-Catalysts.pdf,,._CS-CEN-Sol-2025-Ch-H1-Q19-ChemistryInSociety-Catalysts.pdf,,REVIEW,Could not confidently infer a valid code
+._CS-CEN-Sol-2025-Ch-H1-Q20-ChemistryInSociety-ChemicalEnergy.pdf,,CS-CEN-._CS-CEN-Sol-2025-Ch-H1-Q20-ChemistryInSociety-ChemicalEnergy.pdf,CS-CEN,FIXED,Inferred from topic 'chemicalenergy'
+._CS-EQ-Sol-2024-Ch-H1-Q23-ChemistryInSociety-Equilibia.pdf,,._CS-EQ-Sol-2024-Ch-H1-Q23-ChemistryInSociety-Equilibia.pdf,,REVIEW,Could not confidently infer a valid code
+._CS-EQ-Sol-2025-Ch-H1-Q3-ChemistryInSociety-Equilibria.pdf,,CS-EQ-._CS-EQ-Sol-2025-Ch-H1-Q3-ChemistryInSociety-Equilibria.pdf,CS-EQ,FIXED,Inferred from topic 'equilibria'
+._CS-EQ-Sol-2025-Ch-H1-Q16-ChemistryInSociety-Equilibria.pdf,,CS-EQ-._CS-EQ-Sol-2025-Ch-H1-Q16-ChemistryInSociety-Equilibria.pdf,CS-EQ,FIXED,Inferred from topic 'equilibria'
+._CS-EQ-Sol-2025-Ch-H1-Q17-ChemistryInSociety-Equilibria.pdf,,CS-EQ-._CS-EQ-Sol-2025-Ch-H1-Q17-ChemistryInSociety-Equilibria.pdf,CS-EQ,FIXED,Inferred from topic 'equilibria'
+._NC-ALC-Sol-2025-Ch-H1-Q5-NaturesChemistry-Alcohols.pdf,,NC-ALC-._NC-ALC-Sol-2025-Ch-H1-Q5-NaturesChemistry-Alcohols.pdf,NC-ALC,FIXED,Inferred from topic 'alcohols'
+._NC-CAR-Sol-2025-Ch-H1-Q6-NaturesChemistry-CarboxylicAcids.pdf,,NC-CA-._NC-CAR-Sol-2025-Ch-H1-Q6-NaturesChemistry-CarboxylicAcids.pdf,NC-CA,FIXED,Inferred from topic 'carboxylicacids'
+._NC-EST-Sol-2025-Ch-H1-Q7-NaturesChemistry-Esters.pdf,,NC-EST-._NC-EST-Sol-2025-Ch-H1-Q7-NaturesChemistry-Esters.pdf,NC-EST,FIXED,Inferred from topic 'esters'
+._NC-FOX-Sol-2025-Ch-H1-Q8-NaturesChemistry-OxidationOfFood.pdf,,._NC-FOX-Sol-2025-Ch-H1-Q8-NaturesChemistry-OxidationOfFood.pdf,,REVIEW,Could not confidently infer a valid code
+._NC-FOX-Sol-2025-Ch-H1-Q9-NaturesChemistry-OxidationOfFood.pdf,,._NC-FOX-Sol-2025-Ch-H1-Q9-NaturesChemistry-OxidationOfFood.pdf,,REVIEW,Could not confidently infer a valid code
+._NC-FRA-Sol-2025-Ch-H1-Q12-NaturesChemistry-Fragrances.pdf,,NC-FOX-._NC-FRA-Sol-2025-Ch-H1-Q12-NaturesChemistry-Fragrances.pdf,NC-FOX,FIXED,Inferred from topic 'fragrances'
+._NC-SCC-Sol-2025-Ch-H1-Q4-NaturesChemistry-SystematicCarbonChemistry.pdf,,NC-SCC-._NC-SCC-Sol-2025-Ch-H1-Q4-NaturesChemistry-SystematicCarbonChemistry.pdf,NC-SCC,FIXED,Inferred from topic 'systematiccarbonchemistry'
+._NC-SDE-Sol-2025-Ch-H1-Q10-NaturesChemistry-SoapsDetergentsAndEmulsions.pdf,,NC-S-._NC-SDE-Sol-2025-Ch-H1-Q10-NaturesChemistry-SoapsDetergentsAndEmulsions.pdf,NC-S,FIXED,Inferred from keyword 'soaps' in filename
+._NC-SDE-Sol-2025-Ch-H1-Q11-NaturesChemistry-SoapsDetergentsAndEmulsions.pdf,,NC-S-._NC-SDE-Sol-2025-Ch-H1-Q11-NaturesChemistry-SoapsDetergentsAndEmulsions.pdf,NC-S,FIXED,Inferred from keyword 'soaps' in filename
+._RC-GPT-Sol-2025-Ch-H1-Q24-ChemistryInSociety-ExperimentalTechniques.pdf,,._RC-GPT-Sol-2025-Ch-H1-Q24-ChemistryInSociety-ExperimentalTechniques.pdf,,REVIEW,Could not confidently infer a valid code
+._RC-GPT-Sol-2025-Ch-H1-Q25-ChemistryInSociety-ExperimentalTechniques.pdf,,._RC-GPT-Sol-2025-Ch-H1-Q25-ChemistryInSociety-ExperimentalTechniques.pdf,,REVIEW,Could not confidently infer a valid code

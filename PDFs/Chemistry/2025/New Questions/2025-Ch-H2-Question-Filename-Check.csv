@@ -1,0 +1,25 @@
+filename,detected_code,code_in_spec,reason_if_no
+._CS-EN-2025-Ch-H2-Q7-ChemistryInSociety-CarbonMonoxideAndEnergy.pdf,CS-EN,No,Code not in spec list
+CS-EN-2025-Ch-H2-Q7-ChemistryInSociety-CarbonMonoxideAndEnergy.pdf,CS-EN,No,Code not in spec list
+._CS-RA-2025-Ch-H2-Q6-ChemistryInSociety-ReactionRates.pdf,CS-RA,No,Code not in spec list
+CS-RA-2025-Ch-H2-Q6-ChemistryInSociety-ReactionRates.pdf,CS-RA,No,Code not in spec list
+._CCS-OXR-2025-Ch-H2-Q8-ChemistryInSociety-ExtractionOfMetals.pdf,CCS-OXR,Yes,
+._CCS-OXR-2025-Ch-H2-Q9-NaturesChemistry-FreeRadicalsAndEnzymes.pdf,CCS-OXR,Yes,
+CCS-OXR-2025-Ch-H2-Q8-ChemistryInSociety-ExtractionOfMetals.pdf,CCS-OXR,Yes,
+CCS-OXR-2025-Ch-H2-Q9-NaturesChemistry-FreeRadicalsAndEnzymes.pdf,CCS-OXR,Yes,
+._CCS-PER-2025-Ch-H2-Q2-ChemicalChangesAndStructure-PeriodicityAndStructure.pdf,CCS-PER,Yes,
+CCS-PER-2025-Ch-H2-Q2-ChemicalChangesAndStructure-PeriodicityAndStructure.pdf,CCS-PER,Yes,
+._CCS-SB-2025-Ch-H2-Q1-ChemicalChangesAndStructure-IonisationEnergiesAndIonicBonding.pdf,CCS-SB,Yes,
+._CCS-SB-2025-Ch-H2-Q3-ChemicalChangesAndStructure-BondingContinuum.pdf,CCS-SB,Yes,
+CCS-SB-2025-Ch-H2-Q1-ChemicalChangesAndStructure-IonisationEnergiesAndIonicBonding.pdf,CCS-SB,Yes,
+CCS-SB-2025-Ch-H2-Q3-ChemicalChangesAndStructure-BondingContinuum.pdf,CCS-SB,Yes,
+._CS-GMR-2025-Ch-H2-Q11-ChemistryInSociety-ChemicalAnalysis.pdf,CS-GMR,Yes,
+CS-GMR-2025-Ch-H2-Q11-ChemistryInSociety-ChemicalAnalysis.pdf,CS-GMR,Yes,
+._NC-CA-2025-Ch-H2-Q4-NaturesChemistry-AlcoholsAndCarboxylicAcids.pdf,NC-CA,Yes,
+NC-CA-2025-Ch-H2-Q4-NaturesChemistry-AlcoholsAndCarboxylicAcids.pdf,NC-CA,Yes,
+._NC-SCC-2025-Ch-H2-Q10-NaturesChemistry-NaturalProductsAndAnalysis.pdf,NC-SCC,Yes,
+._NC-SCC-2025-Ch-H2-Q12-NaturesChemistry-OrganicStructuresAndSkeletalFormulae.pdf,NC-SCC,Yes,
+._NC-SCC-2025-Ch-H2-Q5-NaturesChemistry-ProteinsAminoAcidsAndTerpenes.pdf,NC-SCC,Yes,
+NC-SCC-2025-Ch-H2-Q10-NaturesChemistry-NaturalProductsAndAnalysis.pdf,NC-SCC,Yes,
+NC-SCC-2025-Ch-H2-Q12-NaturesChemistry-OrganicStructuresAndSkeletalFormulae.pdf,NC-SCC,Yes,
+NC-SCC-2025-Ch-H2-Q5-NaturesChemistry-ProteinsAminoAcidsAndTerpenes.pdf,NC-SCC,Yes,
