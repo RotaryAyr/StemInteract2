@@ -102,6 +102,37 @@
       padding-top: 0;
       padding-bottom: 0;
     }
+
+    #header {
+      align-items: center;
+    }
+
+    #header .logo {
+      flex: 0 0 auto;
+    }
+
+    .rotary-header-logo {
+      display: block;
+      margin-left: 2em;
+      margin-right: auto;
+      border-bottom: 0;
+    }
+
+    .rotary-header-logo img {
+      display: block;
+      width: 120px;
+      height: auto;
+    }
+
+    @media screen and (max-width: 736px) {
+      .rotary-header-logo {
+        margin-left: 1em;
+      }
+
+      .rotary-header-logo img {
+        width: 90px;
+      }
+    }
   </style>
 </head>
 
@@ -113,7 +144,12 @@
       <div class="inner">
         <!-- Header -->
         <header id="header">
-          <a class="logo" href="">STEM INTERACT</a>
+          <a class="logo" href="/">STEM INTERACT</a>
+
+          <a href="https://rotaryclubofayr.org" class="rotary-header-logo">
+            <img src="images/RotaryIntLogo.jpg" alt="Rotary International" />
+          </a>
+
           <ul class="icons">
             <li>
             <li>
