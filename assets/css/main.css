@@ -2380,6 +2380,7 @@ img[src*="chemistry-images/"] {
 #header .header-brand .logo {
   flex: 0 0 auto;
   margin-left: 2em;
+  margin-top: 0.7em;
 }
 
 .rotary-header-logo {
@@ -2414,6 +2415,18 @@ img[src*="chemistry-images/"] {
 #header .icons li:has(.icon.brands) {
   display: none;
 }
+
+
+/* Keep desktop headers the same height */
+@media screen and (min-width: 737px) {
+  #header {
+    height: 12em;
+    box-sizing: border-box;
+  }
+}
+
+
+
 
 
 
