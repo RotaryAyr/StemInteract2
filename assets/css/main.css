@@ -2410,4 +2410,12 @@ img[src*="chemistry-images/"] {
 }
 
 
+/* Hide unused social-media icons */
+#header .icons li:has(.icon.brands) {
+  display: none;
+}
+
+
+
+
 
