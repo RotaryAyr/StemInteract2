@@ -2365,7 +2365,49 @@ img[src*="chemistry-images/"] {
 }
 
 
+#header {
+  align-items: center;
+}
 
+.header-brand {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4em;
+}
+
+#header .header-brand .logo {
+  flex: 0 0 auto;
+  margin-left: 2em;
+}
+
+.rotary-header-logo {
+  display: block;
+  margin-left: 2em;
+  border-bottom: 0;
+}
+
+.rotary-header-logo img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
+
+
+/* Add Rotary branding above unmodified STEM INTERACT logos */
+#header > .logo::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 55px;
+  margin-bottom: 0.4em;
+  background-image: url("../../images/RotaryIntLogo.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 
 
