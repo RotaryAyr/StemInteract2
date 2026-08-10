@@ -166,8 +166,15 @@ if (isIOS()) {
       if (!pdfUrl.toLowerCase().endsWith(".pdf")) return;
 
       const li = document.createElement("li");
-      li.appendChild(makeDropdown(label, pdfUrl));
-      ul.appendChild(li);
+li.appendChild(makeDropdown(label, pdfUrl));
+
+const questionItem = qLink.closest("li");
+
+if (questionItem) {
+  questionItem.insertAdjacentElement("afterend", li);
+} else {
+  ul.prepend(li);
+}
 
       ul.dataset.aiInjected = "1";
     });

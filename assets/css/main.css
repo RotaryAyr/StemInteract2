@@ -2426,7 +2426,25 @@ img[src*="chemistry-images/"] {
 }
 
 
+/* Place the question and AI buttons together. */
+.button-row ul.actions {
+  display: inline-grid !important;
+  grid-template-columns: max-content max-content;
+  gap: 1em !important;
+  justify-content: center;
+  align-items: center;
+}
 
+.button-row ul.actions > li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 480px) {
+  .button-row ul.actions {
+    grid-template-columns: max-content;
+  }
+}
 
 
 
