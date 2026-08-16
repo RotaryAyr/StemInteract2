@@ -18,7 +18,7 @@
     .explorer-intro { max-width: 900px; }
     .filters {
       display: grid;
-      grid-template-columns: repeat(4, minmax(160px, 1fr));
+      grid-template-columns: repeat(5, minmax(145px, 1fr));
       gap: 1em;
       margin: 2em 0 1em;
     }
@@ -137,9 +137,9 @@
                 <option value="2022">2022</option>
               </select>
             </label>
-            <label>Topic
-              <select id="topic-filter">
-                <option value="all">All topics</option>
+            <label>Course section
+              <select id="course-section-filter">
+                <option value="all">All course sections</option>
                 <option value="Dynamics and space">Dynamics and space</option>
                 <option value="Electricity">Electricity</option>
                 <option value="Properties of matter">Properties of matter</option>
@@ -147,9 +147,14 @@
                 <option value="Nuclear radiation">Nuclear radiation</option>
               </select>
             </label>
-            <label>Section
+            <label>Topic
+              <select id="topic-filter">
+                <option value="all">All topics</option>
+              </select>
+            </label>
+            <label>Paper section
               <select id="section-filter">
-                <option value="all">Both sections</option>
+                <option value="all">Both paper sections</option>
                 <option value="1">Section 1 - multiple choice</option>
                 <option value="2">Section 2 - extended response</option>
               </select>
@@ -346,6 +351,7 @@
 
     const grid = document.getElementById("question-grid");
     const yearFilter = document.getElementById("year-filter");
+    const courseSectionFilter = document.getElementById("course-section-filter");
     const topicFilter = document.getElementById("topic-filter");
     const sectionFilter = document.getElementById("section-filter");
     const searchFilter = document.getElementById("search-filter");
@@ -366,18 +372,92 @@
         "Use National 5 methods and units. If I give an answer, assess it positively against the official SQA marking approach, explain which marking points I have earned, and clearly say that the official marking instructions remain authoritative.";
     }
 
+    const topicsByCourseSection = {
+      "Dynamics and space": ["Vectors and scalars", "Motion, acceleration and graphs", "Forces and Newton's laws", "Energy and power", "Projectile motion", "Space exploration", "Cosmology"],
+      "Electricity": ["Charge and current", "Electric fields", "Potential difference and Ohm's law", "Series and parallel circuits", "Electrical components and switching", "Electrical power"],
+      "Properties of matter": ["Specific heat capacity", "Specific latent heat", "Pressure", "Gas laws and the kinetic model"],
+      "Waves and radiation": ["Wave parameters and speed", "Sound", "Diffraction", "Interference", "Electromagnetic spectrum", "Refraction"],
+      "Nuclear radiation": ["Types, ionisation and penetration", "Activity and background radiation", "Absorbed and equivalent dose", "Half-life", "Fission and fusion", "Applications and safety"]
+    };
+
+    function questionTopics(item) {
+      const text = (item.k + " " + item.d).toLowerCase();
+      const found = [];
+      function add(topic, pattern) { if (pattern.test(text) && !found.includes(topic)) found.push(topic); }
+      if (item.t === "Dynamics and space") {
+        add("Vectors and scalars", /vector|scalar|bearing|resultant displacement/);
+        add("Motion, acceleration and graphs", /velocity|speed|acceleration|motion|distance travelled|displacement|light gate|time graph/);
+        add("Forces and Newton's laws", /newton|force|friction|weight|thrust|drag|terminal velocity|tension/);
+        add("Energy and power", /kinetic energy|potential energy|work done|power|energy/);
+        add("Projectile motion", /projectile|horizontal range|dropped|vertical velocity|path taken/);
+        add("Space exploration", /spacecraft|rocket|satellite|orbit|mars|moon|astronaut|space exploration|telescope|gps/);
+        add("Cosmology", /universe|cosmolog|star|galaxy|light.year|spectrum|spectra|exoplanet|big bang|copernican|redshift/);
+      } else if (item.t === "Electricity") {
+        add("Charge and current", /charge|current|alternating|direct current|a\.c\.|d\.c\.|electron/);
+        add("Electric fields", /electric field|charged particle|point charge|parallel plate/);
+        add("Potential difference and Ohm's law", /potential difference|voltage|ohm|resistance|resistor|v-i|current.voltage/);
+        add("Series and parallel circuits", /series|parallel|total resistance|circuit/);
+        add("Electrical components and switching", /ldr|thermistor|mosfet|transistor|led|diode|relay|fuse|component|switch|capacitor|motor/);
+        add("Electrical power", /power|electrical energy|appliance|fuse rating/);
+      } else if (item.t === "Properties of matter") {
+        add("Specific heat capacity", /specific heat|heat capacity|temperature change|heating/);
+        add("Specific latent heat", /latent heat|melt|melting|fusion|vapor|boil|freezing|state change/);
+        add("Pressure", /pressure|force per unit area/);
+        add("Gas laws and the kinetic model", /gas|kinetic model|kelvin|volume|particle collision|boyle|gay.lussac|charles/);
+      } else if (item.t === "Waves and radiation") {
+        add("Wave parameters and speed", /wave speed|frequency|wavelength|amplitude|transverse|longitudinal|wave equation/);
+        add("Sound", /sound|ultrasound|echo|loudspeaker/);
+        add("Diffraction", /diffract/);
+        add("Interference", /interferen|coherent|constructive|destructive/);
+        add("Electromagnetic spectrum", /electromagnetic|infrared|microwave|radio wave|ultraviolet|visible light|x-ray|gamma ray|gps/);
+        add("Refraction", /refract|glass block|angle of incidence|normal/);
+      } else if (item.t === "Nuclear radiation") {
+        add("Types, ionisation and penetration", /alpha|beta|gamma|ionis|penetrat|absorbing material/);
+        add("Activity and background radiation", /activity|disintegration|count rate|background/);
+        add("Absorbed and equivalent dose", /absorbed dose|equivalent dose|weighting factor|dose rate/);
+        add("Half-life", /half.life|half life/);
+        add("Fission and fusion", /fission|fusion|chain reaction|plasma/);
+        add("Applications and safety", /medical|tracer|cancer|smoke detector|safety|exposure|power source|electricity generation/);
+      }
+      if (!found.length) found.push(topicsByCourseSection[item.t][0]);
+      return found;
+    }
+
+    function updateTopicOptions() {
+      const previous = topicFilter.value;
+      const selectedSection = courseSectionFilter.value;
+      const sections = selectedSection === "all" ? Object.keys(topicsByCourseSection) : [selectedSection];
+      topicFilter.innerHTML = '<option value="all">All topics</option>';
+      sections.forEach(function(sectionName) {
+        const parent = selectedSection === "all" ? document.createElement("optgroup") : topicFilter;
+        if (parent !== topicFilter) parent.label = sectionName;
+        topicsByCourseSection[sectionName].forEach(function(topic) {
+          const option = document.createElement("option");
+          option.value = topic;
+          option.textContent = topic;
+          parent.appendChild(option);
+        });
+        if (parent !== topicFilter) topicFilter.appendChild(parent);
+      });
+      const available = sections.some(function(sectionName) { return topicsByCourseSection[sectionName].includes(previous); });
+      topicFilter.value = available ? previous : "all";
+    }
+
     function render() {
       const year = yearFilter.value;
+      const courseSection = courseSectionFilter.value;
       const topic = topicFilter.value;
       const section = sectionFilter.value;
       const term = searchFilter.value.trim().toLowerCase();
       const filtered = questions.filter(function(item) {
         const itemYear = String(item.y || 2025);
         const yearMatch = year === "all" || itemYear === year;
-        const topicMatch = topic === "all" || item.t === topic;
+        const courseSectionMatch = courseSection === "all" || item.t === courseSection;
+        const itemTopics = questionTopics(item);
+        const topicMatch = topic === "all" || itemTopics.includes(topic);
         const sectionMatch = section === "all" || String(item.s) === section;
-        const haystack = (item.d + " " + item.k + " " + item.t + " " + item.q).toLowerCase();
-        return yearMatch && topicMatch && sectionMatch && (!term || haystack.includes(term));
+        const haystack = (item.d + " " + item.k + " " + item.t + " " + itemTopics.join(" ") + " " + item.q).toLowerCase();
+        return yearMatch && courseSectionMatch && topicMatch && sectionMatch && (!term || haystack.includes(term));
       });
 
       count.textContent = filtered.length + (filtered.length === 1 ? " question" : " questions");
@@ -389,7 +469,7 @@
         card.className = "question-card";
         card.innerHTML =
           '<h3>' + (item.y || 2025) + ': Section ' + item.s + ', Question ' + item.q + '</h3>' +
-          '<div class="meta"><span class="tag">' + item.t + '</span><span class="tag">' + item.m + (item.m === 1 ? ' mark' : ' marks') + '</span></div>' +
+          '<div class="meta"><span class="tag">' + item.t + '</span>' + questionTopics(item).map(function(topic) { return '<span class="tag">' + topic + '</span>'; }).join('') + '<span class="tag">' + item.m + (item.m === 1 ? ' mark' : ' marks') + '</span></div>' +
           '<p>' + item.d + '</p>' +
           '<div class="card-actions">' +
             '<a class="button small primary" href="' + questionUrl(item) + '" target="_blank" rel="noopener">Open question</a>' +
@@ -428,9 +508,11 @@
     }
 
     yearFilter.addEventListener("change", render);
+    courseSectionFilter.addEventListener("change", function() { updateTopicOptions(); render(); });
     topicFilter.addEventListener("change", render);
     sectionFilter.addEventListener("change", render);
     searchFilter.addEventListener("input", render);
+    updateTopicOptions();
     render();
   </script>
   <script src="../../assets/js/jquery.min.js"></script>
