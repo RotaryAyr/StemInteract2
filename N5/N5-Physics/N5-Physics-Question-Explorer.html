@@ -119,7 +119,7 @@
             <h1>National 5 Physics Question Explorer</h1>
           </header>
           <div class="explorer-intro">
-            <p>Explore the 2024 and 2025 National 5 Physics papers by topic. Open the original question, check the official marking guidance, or build a prompt that asks an AI tutor for one hint at a time.</p>
+            <p>Explore the 2022 to 2025 National 5 Physics papers by topic. Open the original question, check the official marking guidance, or build a prompt that asks an AI tutor for one hint at a time.</p>
           </div>
 
           <div class="notice">
@@ -130,9 +130,11 @@
           <div class="filters">
             <label>Year
               <select id="year-filter">
-                <option value="all">Both years</option>
+                <option value="all">All years</option>
                 <option value="2025">2025</option>
                 <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
               </select>
             </label>
             <label>Topic
@@ -164,6 +166,8 @@
               <a class="button small" href="mi_N5_Physics_mi_2025.pdf" target="_blank" rel="noopener">2025 marking instructions</a>
               <a class="button small" href="N5_Physics_Relationships-sheet_2024.pdf" target="_blank" rel="noopener">2024 relationships</a>
               <a class="button small" href="mi_N5_Physics_mi_2024.pdf" target="_blank" rel="noopener">2024 marking instructions</a>
+              <a class="button small" href="mi_N5_Physics_mi_2023.pdf" target="_blank" rel="noopener">2023 marking instructions</a>
+              <a class="button small" href="mi_N5_Physics_mi_2022.pdf" target="_blank" rel="noopener">2022 marking instructions</a>
             </div>
           </div>
 
@@ -171,7 +175,7 @@
           <div id="empty-message" class="empty">No questions match those filters.</div>
 
           <div class="notice">
-            Question-paper and marking-instruction content is credited to the Scottish Qualifications Authority (SQA), 2024-2025, and is used on this non-commercial educational site in support of SQA qualifications.
+            Question-paper and marking-instruction content is credited to the Scottish Qualifications Authority (SQA), 2022-2025, and is used on this non-commercial educational site in support of SQA qualifications.
           </div>
         </section>
       </div>
@@ -180,6 +184,84 @@
 
   <script>
     const questions = [
+      {y:2023,s:1,q:1,p:3,t:"Dynamics and space",k:"scalar vector force acceleration",d:"Classifying vectors and identifying vector quantities.",m:1,a:"D"},
+      {y:2023,s:1,q:2,p:4,t:"Dynamics and space",k:"instantaneous speed trolley light gate card",d:"Selecting the expression for instantaneous speed at a light gate.",m:1,a:"D"},
+      {y:2023,s:1,q:3,p:5,t:"Dynamics and space",k:"speed time graph distance area runner",d:"Finding distance travelled from a speed-time graph.",m:1,a:"C"},
+      {y:2023,s:1,q:4,p:5,t:"Dynamics and space",k:"work force distance slope friction",d:"Calculating work done by a pushing force.",m:1,a:"D"},
+      {y:2023,s:1,q:5,p:6,t:"Dynamics and space",k:"kinetic energy trolley acceleration",d:"Calculating an increase in kinetic energy.",m:1,a:"B"},
+      {y:2023,s:1,q:6,p:6,t:"Dynamics and space",k:"greenhouse earth temperature radiation",d:"Using a supplied relationship for Earth's no-greenhouse temperature.",m:1,a:"D"},
+      {y:2023,s:1,q:7,p:7,t:"Dynamics and space",k:"asteroid planet star orbit sun",d:"Classifying a small rocky object orbiting the Sun.",m:1,a:"A"},
+      {y:2023,s:1,q:8,p:7,t:"Dynamics and space",k:"mars spacecraft force weight motion acceleration",d:"Predicting a spacecraft's motion after its rocket engines fire.",m:1,a:"D"},
+      {y:2023,s:1,q:9,p:8,t:"Electricity",k:"electric field charged particle plates path",d:"Inferring particle and plate charges from motion in an electric field.",m:1,a:"E"},
+      {y:2023,s:1,q:10,p:8,t:"Electricity",k:"alternating current charge direction",d:"Identifying the definition of alternating current.",m:1,a:"C"},
+      {y:2023,s:1,q:11,p:9,t:"Electricity",k:"led resistor voltage current",d:"Calculating the resistance of a series LED resistor.",m:1,a:"D"},
+      {y:2023,s:1,q:12,p:9,t:"Electricity",k:"potential divider series voltage resistance",d:"Calculating a voltmeter reading in a potential divider.",m:1,a:"A"},
+      {y:2023,s:1,q:13,p:10,t:"Electricity",k:"ldr motor mosfet transistor light switch",d:"Selecting an LDR circuit that switches on a motor in darkness.",m:1,a:"C"},
+      {y:2023,s:1,q:14,p:10,t:"Electricity",k:"power energy time slow cooker",d:"Calculating electrical energy used by a slow cooker.",m:1,a:"E"},
+      {y:2023,s:1,q:15,p:11,t:"Electricity",k:"power resistance graph voltage",d:"Determining voltage from a power-resistance graph.",m:1,a:"C"},
+      {y:2023,s:1,q:16,p:12,t:"Properties of matter",k:"specific heat capacity experiment mass temperature joulemeter",d:"Selecting measurements needed for a specific heat-capacity experiment.",m:1,a:"C"},
+      {y:2023,s:1,q:17,p:13,t:"Properties of matter",k:"latent heat fusion ice melting energy",d:"Calculating the energy required to melt ice.",m:1,a:"B"},
+      {y:2023,s:1,q:18,p:13,t:"Properties of matter",k:"pressure force area hammer nail",d:"Calculating area from pressure and force.",m:1,a:"B"},
+      {y:2023,s:1,q:19,p:13,t:"Properties of matter",k:"gas pressure temperature buoy",d:"Relating gas pressure to temperature at fixed volume.",m:1,a:"A"},
+      {y:2023,s:1,q:20,p:14,t:"Properties of matter",k:"gas law pressure volume temperature",d:"Using the combined gas law to find volume.",m:1,a:"C"},
+      {y:2023,s:1,q:21,p:14,t:"Waves and radiation",k:"wave amplitude frequency speed wavelength",d:"Reading amplitude and calculating frequency from a wave diagram.",m:1,a:"B"},
+      {y:2023,s:1,q:22,p:15,t:"Waves and radiation",k:"diffraction water waves gap barrier",d:"Identifying diffraction through a gap.",m:1,a:"E"},
+      {y:2023,s:1,q:23,p:16,t:"Waves and radiation",k:"refraction red light glass air ray",d:"Tracing a ray refracting from glass into air.",m:1,a:"A"},
+      {y:2023,s:1,q:24,p:16,t:"Nuclear radiation",k:"activity becquerel nuclei decays time",d:"Calculating the number of nuclear decays from activity and time.",m:1,a:"E"},
+      {y:2023,s:1,q:25,p:17,t:"Nuclear radiation",k:"nuclear fusion plasma containment temperature",d:"Evaluating statements about nuclear fusion.",m:1,a:"B"},
+      {y:2023,s:2,q:1,p:6,mp:8,t:"Dynamics and space",k:"vectors displacement bearing velocity speed gravitational potential kinetic energy",d:"Seagull displacement, velocity, gravitational potential energy and falling speed.",m:15,a:"Resultant displacement 67 m at bearing 291 degrees; average velocity 2.2 m s-1 at 291 degrees; GPE 0.18 J; maximum vertical speed 12 m s-1, reduced in practice by air resistance."},
+      {y:2023,s:2,q:2,p:10,mp:12,t:"Dynamics and space",k:"projectile bottle velocity time graph height resultant force acceleration cycling drag",d:"Projectile motion of a dropped bottle and forces on a cyclist.",m:14,a:"Curved projectile path; vertical velocity 5.2 m s-1 downwards; height 1.4 m; cyclist acceleration about 0.43 m s-2; drafting reduces air resistance."},
+      {y:2023,s:2,q:3,p:14,mp:14,t:"Dynamics and space",k:"satellite geostationary weight orbital altitude period",d:"Satellite selection, weight at altitude and orbital period prediction.",m:6,a:"Astra 1KR is geostationary because its period is 24 h; UKube-1 weight is 27 N; predicted period must lie between 101 and 676 minutes."},
+      {y:2023,s:2,q:4,p:16,mp:15,t:"Dynamics and space",k:"moon base space exploration gravity atmosphere energy",d:"Extended response on benefits and challenges of a Moon base.",m:3,a:"Holistically marked. Relevant physics includes lower gravity, no atmosphere, radiation, temperature extremes, resources, energy and travel."},
+      {y:2023,s:2,q:5,p:18,mp:16,t:"Dynamics and space",k:"space telescope spectrum elements hydrogen calcium light year",d:"Space telescopes, stellar spectra and light-year distance.",m:4,a:"A space telescope avoids weather and atmospheric distortion; hydrogen and calcium are present; distance is 3.2 x 10^18 m."},
+      {y:2023,s:2,q:6,p:20,mp:17,t:"Electricity",k:"series parallel circuit resistance current ammeter",d:"Series and parallel resistance and their effect on circuit current.",m:10,a:"Initial current 0.20 A; with the parallel branch the total resistance is 42 ohms; the ammeter reading becomes greater because total resistance falls."},
+      {y:2023,s:2,q:7,p:22,mp:19,t:"Electricity",k:"capacitor plates distance charge graph experimental improvements",d:"Graphing capacitor charge against plate separation and improving the experiment.",m:6,a:"Best-fit curve; charge at 25 mm is about 74 pC; improvements include repeats and averaging, more distances or a wider range."},
+      {y:2023,s:2,q:8,p:26,mp:20,t:"Properties of matter",k:"specific heat capacity titanium ceramic energy temperature",d:"Heating titanium and comparing titanium with ceramic plates.",m:6,a:"Minimum energy about 2120 J; actual input is greater because energy is lost to the surroundings; heating time depends on mass, heat capacity, conductivity and heat loss."},
+      {y:2023,s:2,q:9,p:28,mp:21,t:"Properties of matter",k:"pressure gas law crisp packet altitude equivalent dose",d:"Gas pressure and volume in flight, followed by radiation dose.",m:7,a:"Pressure is force per unit area; crisp-packet volume about 2.5 x 10^-3 m3; gas particles collide with the walls; equivalent dose about 21 microSv."},
+      {y:2023,s:2,q:10,p:30,mp:22,t:"Waves and radiation",k:"ultrasound echo distance frequency oscilloscope",d:"Parking-sensor ultrasound distance and frequency.",m:7,a:"Wall distance about 2.6 m; frequency 45 000 Hz; travel time remains the same because sound speed and distance are unchanged."},
+      {y:2023,s:2,q:11,p:32,mp:23,t:"Waves and radiation",k:"electromagnetic spectrum diffraction microwaves wavelength x ray absorbed equivalent dose",d:"Electromagnetic-spectrum identification, diffraction, wireless signals and X-ray dose.",m:12,a:"P is ultraviolet and Q infrared; radio waves diffract most; wireless signal wavelength 0.12 m and is microwave; absorbed energy 2.3 x 10^-5 J; equivalent dose 5.0 x 10^-6 Sv."},
+      {y:2023,s:2,q:12,p:36,mp:24,t:"Waves and radiation",k:"analogy refraction wave speed wavelength students sand",d:"Extended response evaluating an analogy for refraction.",m:3,a:"Holistically marked. A strong response links the change of speed at the boundary to a change in direction and wavelength while frequency remains constant."},
+      {y:2023,s:2,q:13,p:39,mp:25,t:"Nuclear radiation",k:"alpha beta gamma absorption ionisation spark counter charge current",d:"Identifying radiation using absorbers and investigating ionisation with a spark counter.",m:11,a:"Source Y emits alpha and gamma; ionisation involves an atom gaining or losing electrons; alpha causes the sparks because of its short range; charge per spark is 7.5 x 10^-8 C."},
+      {y:2023,s:2,q:14,p:42,mp:28,t:"Nuclear radiation",k:"iodine half life background count corrected activity medical uses",d:"Background correction, half-life and uses of nuclear radiation.",m:6,a:"Measure background count rate; half-life about 60 days; one-eighth activity after 180 days; initial corrected count about 4000 counts per minute; give another valid use of radiation."},
+      {y:2022,s:1,q:1,p:3,t:"Dynamics and space",k:"scalar vector acceleration displacement energy force",d:"Identifying one scalar and one vector quantity.",m:1,a:"E"},
+      {y:2022,s:1,q:2,p:3,t:"Dynamics and space",k:"constant acceleration speed average toy car",d:"Selecting consistent speeds and average speed for constant acceleration.",m:1,a:"C"},
+      {y:2022,s:1,q:3,p:4,t:"Dynamics and space",k:"speed time graph cyclist distance area",d:"Finding distance from a speed-time graph.",m:1,a:"D"},
+      {y:2022,s:1,q:4,p:5,t:"Dynamics and space",k:"newton third law water rocket reaction force",d:"Explaining launch using a Newton's third-law force pair.",m:1,a:"B"},
+      {y:2022,s:1,q:5,p:6,t:"Dynamics and space",k:"gravitational potential kinetic energy falling ball",d:"Comparing changes in potential and kinetic energy.",m:1,a:"B"},
+      {y:2022,s:1,q:6,p:6,t:"Dynamics and space",k:"weightlessness orbit gravity free fall",d:"Evaluating explanations of weightlessness in orbit.",m:1,a:"B"},
+      {y:2022,s:1,q:7,p:7,t:"Dynamics and space",k:"earth moon galaxy distance scale",d:"Ordering astronomical distances.",m:1,a:"C"},
+      {y:2022,s:1,q:8,p:7,t:"Dynamics and space",k:"satellite orbital period geostationary altitude",d:"Comparing satellite orbital periods.",m:1,a:"A"},
+      {y:2022,s:1,q:9,p:8,t:"Dynamics and space",k:"spacecraft rocket engines force direction deceleration",d:"Selecting rocket engines that reduce spacecraft speed.",m:1,a:"A"},
+      {y:2022,s:1,q:10,p:8,t:"Dynamics and space",k:"weight mass gravitational field planet",d:"Using weight-mass data to predict another weight.",m:1,a:"D"},
+      {y:2022,s:1,q:11,p:9,t:"Electricity",k:"charge current time hair dryer",d:"Calculating charge from current and time.",m:1,a:"C"},
+      {y:2022,s:1,q:12,p:9,t:"Electricity",k:"current voltage graph resistance components",d:"Comparing component resistance using current-voltage graphs.",m:1,a:"D"},
+      {y:2022,s:1,q:13,p:10,t:"Electricity",k:"series parallel circuit ammeter voltmeter",d:"Predicting meter readings in a resistor circuit.",m:1,a:"E"},
+      {y:2022,s:1,q:14,p:11,t:"Electricity",k:"thermistor circuit symbol",d:"Recognising the thermistor circuit symbol.",m:1,a:"B"},
+      {y:2022,s:1,q:15,p:12,t:"Properties of matter",k:"heating graph specific heat latent heat state change",d:"Interpreting heating curves for two substances.",m:1,a:"D"},
+      {y:2022,s:1,q:16,p:12,t:"Properties of matter",k:"latent heat fusion melting ice energy",d:"Calculating energy required to melt ice.",m:1,a:"D"},
+      {y:2022,s:1,q:17,p:13,t:"Properties of matter",k:"pressure weight area bicycle tyres",d:"Calculating pressure exerted by bicycle tyres.",m:1,a:"E"},
+      {y:2022,s:1,q:18,p:13,t:"Properties of matter",k:"gas molecule kinetic energy kelvin boltzmann",d:"Using a supplied relationship for molecular kinetic energy.",m:1,a:"E"},
+      {y:2022,s:1,q:19,p:14,t:"Waves and radiation",k:"longitudinal sound electromagnetic waves",d:"Identifying a longitudinal wave.",m:1,a:"A"},
+      {y:2022,s:1,q:20,p:14,t:"Waves and radiation",k:"radio frequency wavelength speed",d:"Calculating maximum radio wavelength.",m:1,a:"D"},
+      {y:2022,s:1,q:21,p:14,t:"Waves and radiation",k:"electromagnetic spectrum order wavelength",d:"Correcting the order of the electromagnetic spectrum.",m:1,a:"C"},
+      {y:2022,s:1,q:22,p:15,t:"Nuclear radiation",k:"alpha beta gamma absorption paper aluminium",d:"Identifying radiations transmitted through absorbers.",m:1,a:"E"},
+      {y:2022,s:1,q:23,p:15,t:"Nuclear radiation",k:"activity alpha particles time becquerel",d:"Calculating activity from emitted particles and time.",m:1,a:"A"},
+      {y:2022,s:1,q:24,p:16,t:"Nuclear radiation",k:"medical tracer beta gamma half life",d:"Selecting radiation and half-life for a medical tracer.",m:1,a:"D"},
+      {y:2022,s:1,q:25,p:16,t:"Nuclear radiation",k:"half life activity rhodium",d:"Calculating activity after several half-lives.",m:1,a:"C"},
+      {y:2022,s:2,q:1,p:6,mp:8,t:"Dynamics and space",k:"vectors displacement bearing average speed velocity aeroplane",d:"Aeroplane displacement, direction, average speed and velocity.",m:9,a:"Displacement about 190 km at bearing 223 degrees; average speed about 110 m s-1; average velocity about 110 m s-1 at bearing 043 degrees."},
+      {y:2022,s:2,q:2,p:8,mp:11,t:"Dynamics and space",k:"projectile marble range graph experiment variables",d:"Graphing and investigating the horizontal range of a marble.",m:8,a:"Best-fit straight line; predicted range about 0.57 m; use carbon paper, sand or video to identify landing; investigate a valid variable while controlling others."},
+      {y:2022,s:2,q:3,p:12,mp:12,t:"Dynamics and space",k:"mars spaceship weight thrust force acceleration altitude",d:"Weight, forces and acceleration of a spacecraft launching from Mars.",m:11,a:"Weight about 4.8 x 10^6 N; thrust upwards and weight downwards; launch acceleration about 5.5 m s-2; acceleration increases as mass, weight or gravitational field strength falls."},
+      {y:2022,s:2,q:4,p:14,mp:14,t:"Dynamics and space",k:"space underwater exploration pressure gravity communication energy",d:"Extended response comparing space and underwater exploration.",m:3,a:"Holistically marked. Relevant comparisons include pressure, gravity or buoyancy, temperature, life support, communication, visibility and energy."},
+      {y:2022,s:2,q:5,p:16,mp:15,t:"Dynamics and space",k:"rigel star supernova light year speed spectrum elements",d:"Supernova distance, debris motion and stellar spectra.",m:10,a:"Distance about 8.1 x 10^18 m; debris speed 1.5 x 10^7 m s-1; travel time about 5.4 x 10^11 s; light may not yet have arrived; identify spectrum type and match lines to elements."},
+      {y:2022,s:2,q:6,p:20,mp:16,t:"Electricity",k:"resistors series parallel voltage current resistance ammeter",d:"Comparing resistors and calculating series and parallel circuit values.",m:10,a:"The 4 ohm resistor passes greater current; voltmeter reads 1.2 V; parallel total resistance is 3.2 ohms; another parallel branch increases current by reducing total resistance."},
+      {y:2022,s:2,q:7,p:22,mp:18,t:"Electricity",k:"dehumidifier fuse resistance led mosfet moisture sensor variable resistor",d:"Dehumidifier fuse, resistance and automatic switching circuit.",m:8,a:"Use a 3 A fuse; resistance about 150 ohms; LED must have correct polarity; increased moisture raises the control voltage until the transistor switches on; variable resistor sets the switching level."},
+      {y:2022,s:2,q:8,p:24,mp:19,t:"Properties of matter",k:"iron current power specific heat capacity aluminium temperature energy loss",d:"Electric-iron current and heating of its aluminium soleplate.",m:8,a:"Current about 7.6 A; calculated maximum temperature about 237 degrees C; actual temperature is lower because energy is transferred to the surroundings, iron or clothes."},
+      {y:2022,s:2,q:9,p:26,mp:20,t:"Properties of matter",k:"gas pressure temperature experiment kinetic model tyres",d:"Establishing the gas pressure-temperature relationship and explaining tyre pressure.",m:8,a:"Pressure is directly proportional to kelvin temperature; predicted pressure about 140 kPa; improve with repeats or more temperatures; faster particles collide more often or harder, increasing pressure."},
+      {y:2022,s:2,q:10,p:30,mp:23,t:"Waves and radiation",k:"ripple tank wavelength frequency speed diffraction",d:"Ripple-tank wave calculations and diffraction around an obstacle.",m:8,a:"Wavelength 0.020 m; frequency 15 Hz; speed 0.30 m s-1; diffracted wavefronts curve into the shadow region with unchanged wavelength."},
+      {y:2022,s:2,q:11,p:32,mp:25,t:"Waves and radiation",k:"laser refraction glass wavelength pulse energy power time",d:"Laser refraction and the duration of dental-laser pulses.",m:6,a:"The effect is refraction; ray bends towards the normal on entry and leaves without bending at the curved face; wavelength is shorter in glass; pulse time 1.7 x 10^-3 s."},
+      {y:2022,s:2,q:12,p:34,mp:26,t:"Waves and radiation",k:"infrared leslie cube thermopile distance surface solar shower",d:"Infrared emission from surfaces and operation of a solar shower.",m:6,a:"Detected infrared decreases with distance; shiny silver gives a lower curve than matt black; extended response should explain absorption and emission by the two surfaces."},
+      {y:2022,s:2,q:13,p:38,mp:28,t:"Nuclear radiation",k:"smoke detector alpha ionisation half life equivalent dose",d:"Alpha sources in smoke detectors, half-life and worker dose.",m:9,a:"Alpha is strongly ionising and has a short range; source Z has the longest half-life but all shown are too short for a ten-year detector; equivalent dose is 7.2 x 10^-4 Sv."},
+      {y:2022,s:2,q:14,p:42,mp:29,t:"Nuclear radiation",k:"nuclear fission fusion reactor energy power reactions plasma",d:"Nuclear fission energy and the challenge of sustaining fusion.",m:6,a:"Fission splits a large nucleus; about 1.9 x 10^22 fissions occur per hour; fusion requires very high temperature and controlled containment of plasma."},
       {y:2024,s:1,q:1,p:3,t:"Dynamics and space",k:"scalar vector speed weight energy",d:"Classifying scalar and vector quantities.",m:1,a:"E"},
       {y:2024,s:1,q:2,p:3,t:"Dynamics and space",k:"trolley average instantaneous speed light gate",d:"Distinguishing average speed from instantaneous speed in a trolley experiment.",m:1,a:"B"},
       {y:2024,s:1,q:3,p:4,t:"Dynamics and space",k:"newton third law rocket exhaust",d:"Identifying a Newton's third-law force pair for a rocket.",m:1,a:"E"},
