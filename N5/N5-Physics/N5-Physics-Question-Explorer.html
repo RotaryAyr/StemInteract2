@@ -154,11 +154,11 @@
                 <option value="all">All topics</option>
               </select>
             </label>
-            <label>Paper section
+            <label>Paper
               <select id="section-filter">
-                <option value="all">Both paper sections</option>
-                <option value="1">Section 1 - multiple choice</option>
-                <option value="2">Section 2 - extended response</option>
+                <option value="all">Both papers</option>
+                <option value="1">Paper 1 — Multiple Choice</option>
+                <option value="2">Paper 2</option>
               </select>
             </label>
             <label>Search
@@ -383,9 +383,13 @@
       markingInstructions.removeAttribute("aria-disabled");
     }
 
+    function paperName(item) {
+      return item.s === 1 ? "Paper 1 — Multiple Choice" : "Paper 2";
+    }
+
     function tutorPrompt(item) {
-      return "Act as a supportive National 5 Physics tutor. I am working on the " + (item.y || 2025) + " paper, Section " +
-        item.s + ", Question " + item.q + " (" + item.d + "). It is worth " + item.m +
+      return "Act as a supportive National 5 Physics tutor. I am working on the " + (item.y || 2025) + " " + paperName(item) +
+        ", Question " + item.q + " (" + item.d + "). It is worth " + item.m +
         (item.m === 1 ? " mark. " : " marks. ") +
         "First ask me what I have tried. Give only one small hint at a time and do not reveal the final answer unless I explicitly ask. " +
         "Use National 5 methods and units. If I give an answer, assess it positively against the official SQA marking approach, explain which marking points I have earned, and clearly say that the official marking instructions remain authoritative.";
@@ -487,7 +491,7 @@
         const card = document.createElement("article");
         card.className = "question-card";
         card.innerHTML =
-          '<h3>' + (item.y || 2025) + ': Section ' + item.s + ', Question ' + item.q + '</h3>' +
+          '<h3>' + (item.y || 2025) + ': ' + paperName(item) + ', Question ' + item.q + '</h3>' +
           '<div class="meta"><span class="tag">' + item.t + '</span>' + questionTopics(item).map(function(topic) { return '<span class="tag">' + topic + '</span>'; }).join('') + '<span class="tag">' + item.m + (item.m === 1 ? ' mark' : ' marks') + '</span></div>' +
           '<p>' + item.d + '</p>' +
           '<div class="card-actions">' +
