@@ -9,13 +9,15 @@
     #header { align-items: center; }
     #header .icons { display: flex; justify-content: flex-end; align-items: center; }
     #header .button { display: inline-flex; align-items: center; justify-content: center; line-height: 1.2; text-align: center; }
+    .hub-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0.65em; padding: 1em 0; border-bottom: 1px solid #e5e5e5; font-size: 0.9em; }
+    .hub-nav a { border-bottom: 0; font-weight: 700; }
+    .hub-nav span { color: #999; }
     .intro { max-width: 760px; }
     .level-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25em; margin: 2em 0; }
     .level-card { border: 1px solid #d7d7d7; border-radius: 10px; padding: 1.5em; background: #fff; display: flex; flex-direction: column; }
     .level-card h2 { margin-bottom: .45em; }
     .level-card p { flex-grow: 1; }
     .level-card .button { display: inline-flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2; margin: 0; }
-    .back-link { margin-top: 1em; }
     @media screen and (max-width: 900px) { .level-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -29,6 +31,11 @@
             <li><a href="https://rotaryclubofayr.org" class="button small">Ayr Rotary</a></li>
           </ul>
         </header>
+
+        <nav class="hub-nav" aria-label="Physics Question Explorer navigation">
+          <a href="Ph-physics.html">Physics</a><span>›</span>
+          <strong>Question Explorers</strong>
+        </nav>
 
         <section>
           <header class="main"><h1>Physics Question Explorer</h1></header>
@@ -53,8 +60,6 @@
               <a href="AH/Ph_AH/Advanced-Higher-Physics-Question-Explorer.html" class="button primary big">Advanced Higher Question Explorer</a>
             </article>
           </div>
-
-          <p class="back-link"><a href="Ph-physics.html" class="button">Back to Physics</a></p>
         </section>
       </div>
     </div>
