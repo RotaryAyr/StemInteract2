@@ -107,7 +107,12 @@
       .question-grid { grid-template-columns: 1fr; }
     }
   </style>
-</head>
+<style id="question-action-layout">
+.actions,.actions-row,.card-actions{display:grid!important;grid-template-columns:max-content max-content;align-items:stretch;justify-content:start;gap:.6em}
+.actions>a.button.primary,.actions-row>a.button.primary,.card-actions>a.button.primary{grid-column:1/-1;justify-self:start}
+.actions .button,.actions-row .button,.card-actions .button{margin:0}
+@media(max-width:420px){.actions,.actions-row,.card-actions{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.actions .button,.actions-row .button,.card-actions .button{white-space:normal;padding-left:.7em;padding-right:.7em}}
+</style></head>
 <body class="is-preload">
   <div id="wrapper">
     <div id="main">

@@ -16,7 +16,12 @@
     .ai-panel{position:relative;display:none;border:1px solid #f56a6a;border-radius:8px;padding:2.7em 1em 1em;background:#fff8f8}.ai-panel.open{display:block}.ai-panel textarea{min-height:190px;resize:vertical}.prompt-tools{position:absolute;top:.65em;right:.65em;margin:0}.copy-prompt{appearance:none;background:transparent;border:0;box-shadow:none;color:#777;cursor:pointer;font-size:.8em;padding:.25em .4em;text-decoration:underline;text-transform:none;letter-spacing:normal}.copy-prompt:hover{color:#f56a6a}.ai-services{margin-top:.8em}.empty{display:none;text-align:center;padding:3em 1em}
     @media(max-width:1000px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:736px){.filters,.grid{grid-template-columns:1fr}}
   </style>
-</head>
+<style id="question-action-layout">
+.actions,.actions-row,.card-actions{display:grid!important;grid-template-columns:max-content max-content;align-items:stretch;justify-content:start;gap:.6em}
+.actions>a.button.primary,.actions-row>a.button.primary,.card-actions>a.button.primary{grid-column:1/-1;justify-self:start}
+.actions .button,.actions-row .button,.card-actions .button{margin:0}
+@media(max-width:420px){.actions,.actions-row,.card-actions{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.actions .button,.actions-row .button,.card-actions .button{white-space:normal;padding-left:.7em;padding-right:.7em}}
+</style></head>
 <body class="is-preload"><div id="wrapper"><div id="main"><div class="inner">
   <header id="header"><a class="logo" href="../../mathematics.html">STEM INTERACT</a><ul class="icons"><li><a href="https://rotaryclubofayr.org" class="button small">Ayr Rotary</a></li></ul></header>
   <nav class="crumbs" aria-label="National 5 Mathematics navigation"><a href="../../mathematics.html">Mathematics</a><span>›</span><a href="../../Mathematics-Question-Explorers.html">Question Explorers</a><span>›</span><strong>National 5 Mathematics</strong></nav>
