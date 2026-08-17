@@ -407,6 +407,24 @@
         "Use National 5 methods and units. If I give an answer, assess it positively against the official SQA marking approach, explain which marking points I have earned, and clearly say that the official marking instructions remain authoritative.";
     }
 
+    function explainPrompt(item) {
+      return "Explain the complete solution to the " + (item.y || 2025) + " " + paperName(item) +
+        ", Question " + item.q + " (" + item.d + "), worth " + item.m +
+        (item.m === 1 ? " mark" : " marks") + ", in fine detail.\n\n" +
+        "Rules:\n1. Use UK English and Scottish National 5 Physics terminology.\n" +
+        "2. Restate what the question is asking and outline the approach.\n" +
+        "3. Explain every step, relationship, substitution, unit and marking point clearly.\n" +
+        "4. Do not invent details that are not visible; ask me to paste or upload anything you cannot see.\n" +
+        "5. Treat the official marking instructions as authoritative.\n\n" +
+        "End with: **AI explanations may contain mistakes; check against the official marking instructions.**";
+    }
+
+    function showPrompt(card, item, mode) {
+      const panel = card.querySelector(".ai-panel");
+      panel.querySelector("textarea").value = mode === "hint" ? tutorPrompt(item) : explainPrompt(item);
+      panel.classList.add("open");
+    }
+
     const topicsByCourseSection = {
       "Dynamics and space": ["Vectors and scalars", "Motion, acceleration and graphs", "Forces and Newton's laws", "Energy and power", "Projectile motion", "Space exploration", "Cosmology"],
       "Electricity": ["Charge and current", "Electric fields", "Potential difference and Ohm's law", "Series and parallel circuits", "Electrical components and switching", "Electrical power"],
@@ -560,12 +578,13 @@
           '<p>' + item.d + '</p>' +
           '<div class="card-actions">' +
             '<a class="button small primary" href="' + questionUrl(item) + '" target="_blank" rel="noopener">Open question</a>' +
-            '<button class="button small ai-toggle" type="button">AI help</button>' +
+            '<button class="button small hint-toggle" type="button">Get a hint</button>' +
+            '<button class="button small explain-toggle" type="button">Explain solution</button>' +
           '</div>' +
           '<details><summary>Quick official-answer summary</summary><p class="official-answer">' + item.a + '</p></details>' +
           '<div class="ai-panel">' +
             '<p><strong>Copy this prompt, then open your preferred AI tutor:</strong></p>' +
-            '<textarea readonly>' + tutorPrompt(item) + '</textarea>' +
+            '<textarea readonly></textarea>' +
             '<div class="prompt-tools"><button class="copy-prompt" type="button">Copy prompt</button></div>' +
             '<div class="ai-services">' +
               '<a class="button small" href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a>' +
@@ -574,8 +593,11 @@
             '</div>' +
           '</div>';
 
-        card.querySelector(".ai-toggle").addEventListener("click", function() {
-          card.querySelector(".ai-panel").classList.toggle("open");
+        card.querySelector(".hint-toggle").addEventListener("click", function() {
+          showPrompt(card, item, "hint");
+        });
+        card.querySelector(".explain-toggle").addEventListener("click", function() {
+          showPrompt(card, item, "explain");
         });
         card.querySelector(".copy-prompt").addEventListener("click", async function(event) {
           const button = event.currentTarget;
