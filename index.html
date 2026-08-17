@@ -9,8 +9,8 @@
   <style>
     /* Custom Styles */
     .image.object {
-      max-height: 300px;
-      overflow: hidden;
+      max-height: none;
+      overflow: visible;
       display: inline-block;
     }
 
@@ -20,6 +20,18 @@
       height: auto;
       display: block;
       object-fit: contain;
+    }
+
+    .non-stem-entry {
+      display: block;
+      margin-top: 1.25em;
+      text-align: center;
+    }
+
+    .non-stem-entry .button {
+      margin: 0;
+      min-width: 220px;
+      white-space: normal;
     }
 
     @media (max-width: 600px) {
@@ -166,6 +178,9 @@
 
           <span class="image object">
             <img src="images/Happy%20Students.jpeg" alt="Happy students studying STEM subjects" />
+            <span class="non-stem-entry">
+              <a href="Non-STEM-Subjects.html" class="button primary button-clear">Non-STEM Subjects</a>
+            </span>
           </span>
         </section>
 
