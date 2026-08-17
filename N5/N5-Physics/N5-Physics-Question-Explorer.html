@@ -178,8 +178,7 @@
           <div class="toolbar">
             <div id="question-count" aria-live="polite"></div>
             <div class="resource-links">
-              <a class="button small" href="N5_Physics_Relationships-sheet_2025.pdf" target="_blank" rel="noopener">2025 relationships</a>
-              <a class="button small" href="N5_Physics_Relationships-sheet_2024.pdf" target="_blank" rel="noopener">2024 relationships</a>
+              <a id="relationships-sheet" class="button small" href="N5_Physics_Relationships-sheet_2025.pdf" target="_blank" rel="noopener">Relationships sheet</a>
               <a id="marking-instructions" class="button small resource-disabled" aria-disabled="true">Choose a year for marking instructions</a>
             </div>
           </div>
@@ -364,6 +363,7 @@
     const sectionFilter = document.getElementById("section-filter");
     const searchFilter = document.getElementById("search-filter");
     const markingInstructions = document.getElementById("marking-instructions");
+    const relationshipsSheet = document.getElementById("relationships-sheet");
     const count = document.getElementById("question-count");
     const empty = document.getElementById("empty-message");
 
@@ -375,6 +375,7 @@
 
     function updateMarkingInstructions() {
       const year = yearFilter.value;
+      relationshipsSheet.href = "N5_Physics_Relationships-sheet_" + (year === "2024" ? "2024" : "2025") + ".pdf";
       if (year === "all") {
         markingInstructions.removeAttribute("href");
         markingInstructions.removeAttribute("target");
