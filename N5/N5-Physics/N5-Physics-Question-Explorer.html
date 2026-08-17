@@ -180,6 +180,7 @@
             <div class="resource-links">
               <a id="relationships-sheet" class="button small" href="N5_Physics_Relationships-sheet_2025.pdf" target="_blank" rel="noopener">Relationships sheet</a>
               <a id="marking-instructions" class="button small resource-disabled" aria-disabled="true">Choose a year for marking instructions</a>
+              <a id="topic-notes" class="button small resource-disabled" aria-disabled="true">Choose a topic for notes</a>
             </div>
           </div>
 
@@ -364,6 +365,7 @@
     const searchFilter = document.getElementById("search-filter");
     const markingInstructions = document.getElementById("marking-instructions");
     const relationshipsSheet = document.getElementById("relationships-sheet");
+    const topicNotes = document.getElementById("topic-notes");
     const count = document.getElementById("question-count");
     const empty = document.getElementById("empty-message");
 
@@ -412,6 +414,58 @@
       "Waves and radiation": ["Wave parameters and speed", "Sound", "Diffraction", "Interference", "Electromagnetic spectrum", "Refraction"],
       "Nuclear radiation": ["Types, ionisation and penetration", "Activity and background radiation", "Absorbed and equivalent dose", "Half-life", "Fission and fusion", "Applications and safety"]
     };
+
+    const notesByTopic = {
+      "Vectors and scalars": "https://www.bbc.co.uk/bitesize/guides/zydyxfr/revision/1",
+      "Motion, acceleration and graphs": "https://www.bbc.co.uk/bitesize/guides/zxrtw6f/revision/1",
+      "Forces and Newton's laws": "https://www.bbc.co.uk/bitesize/guides/zgn82hv/revision/1",
+      "Energy and power": "https://www.bbc.co.uk/bitesize/guides/zq2csrd/revision/1",
+      "Projectile motion": "https://www.bbc.co.uk/bitesize/guides/zrsdmp3/revision/1",
+      "Space exploration": "https://www.bbc.co.uk/bitesize/guides/zqm4fcw/revision/1",
+      "Cosmology": "https://www.bbc.co.uk/bitesize/guides/zq6kv9q/revision/1",
+      "Charge and current": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Electric fields": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Potential difference and Ohm's law": "https://www.bbc.co.uk/bitesize/guides/z8b2pv4/revision/1",
+      "Series and parallel circuits": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Electrical components and switching": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Electrical power": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Specific heat capacity": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Specific latent heat": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Pressure": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Gas laws and the kinetic model": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Wave parameters and speed": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Sound": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Diffraction": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Interference": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Electromagnetic spectrum": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Refraction": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Types, ionisation and penetration": "https://www.bbc.co.uk/bitesize/guides/zt9s2nb/revision/1",
+      "Activity and background radiation": "https://www.bbc.co.uk/bitesize/guides/zt9s2nb/revision/1",
+      "Absorbed and equivalent dose": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Half-life": "https://www.bbc.co.uk/bitesize/guides/zxxrng8/revision/1",
+      "Fission and fusion": "https://www.bbc.co.uk/bitesize/subjects/z6fsgk7",
+      "Applications and safety": "https://www.bbc.co.uk/bitesize/guides/zt9s2nb/revision/1"
+    };
+
+    function updateTopicNotes() {
+      const selectedTopic = topicFilter.value;
+      const destination = notesByTopic[selectedTopic];
+      if (selectedTopic === "all" || !destination) {
+        topicNotes.removeAttribute("href");
+        topicNotes.removeAttribute("target");
+        topicNotes.removeAttribute("rel");
+        topicNotes.textContent = "Choose a topic for notes";
+        topicNotes.classList.add("resource-disabled");
+        topicNotes.setAttribute("aria-disabled", "true");
+        return;
+      }
+      topicNotes.href = destination;
+      topicNotes.target = "_blank";
+      topicNotes.rel = "noopener";
+      topicNotes.textContent = selectedTopic + " notes";
+      topicNotes.classList.remove("resource-disabled");
+      topicNotes.removeAttribute("aria-disabled");
+    }
 
     function questionTopics(item) {
       const text = (item.k + " " + item.d).toLowerCase();
@@ -541,12 +595,13 @@
     }
 
     yearFilter.addEventListener("change", function() { updateMarkingInstructions(); render(); });
-    courseSectionFilter.addEventListener("change", function() { updateTopicOptions(); render(); });
-    topicFilter.addEventListener("change", render);
+    courseSectionFilter.addEventListener("change", function() { updateTopicOptions(); updateTopicNotes(); render(); });
+    topicFilter.addEventListener("change", function() { updateTopicNotes(); render(); });
     sectionFilter.addEventListener("change", render);
     searchFilter.addEventListener("input", render);
     updateTopicOptions();
     updateMarkingInstructions();
+    updateTopicNotes();
     render();
   </script>
   <script src="../../assets/js/jquery.min.js"></script>
