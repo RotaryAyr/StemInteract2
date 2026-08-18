@@ -2447,6 +2447,21 @@ img[src*="chemistry-images/"] {
 }
 
 
+/* Keep the STEM INTERACT header identical to the homepage on every page. */
+#header .logo {
+  border-bottom: 0 !important;
+  color: #3d4449 !important;
+  display: inline-block !important;
+  font-family: "Roboto Slab", serif !important;
+  font-size: 0.95em !important;
+  font-weight: bold !important;
+  margin-left: 2em !important;
+  text-decoration: none !important;
+}
+
+#header .logo u {
+  text-decoration: none !important;
+}
 
 
 
