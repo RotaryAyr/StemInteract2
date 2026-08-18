@@ -2457,11 +2457,16 @@ img[src*="chemistry-images/"] {
   font-weight: bold !important;
   margin-left: 2em !important;
   text-decoration: none !important;
+  transition: color 0.2s ease !important;
 }
 
 #header .logo u {
   text-decoration: none !important;
 }
 
+#header .logo:hover,
+#header .logo:focus-visible {
+  color: #f56a6a !important;
+}
 
 
